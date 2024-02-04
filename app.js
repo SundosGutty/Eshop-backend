@@ -20,6 +20,8 @@ app.use(morgan("tiny"));
 app.use(authJwt());
 const uploadsPath = path.join(__dirname, 'public/uploads');
 app.use("/public/uploads", express.static(uploadsPath));
+console.log('__dirname:', __dirname);
+console.log('uploadsPath:', uploadsPath);
 app.use(errorHandler);
 
 //Routes
